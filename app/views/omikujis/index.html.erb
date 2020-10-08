@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おみくじ</title>
+  <style>
+    body{
+      background-color: aqua;
+    }
+    p {
+      text-align: center;
+      font-size: 2em;
+      margin-top: 100px;
+    }
+    input {
+      width: 100%;
+      text-align: center;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    //大吉・吉・中吉・小吉・末吉・凶・大凶
+    let kujis = ['大吉','吉','吉','中吉','中吉','小吉','小吉','末吉','末吉','凶','大凶'];
+    console.log(kujis[0]);
+let kuji = Math.floor(Math.random()*kujis.length);
+// console.log(kuji);
+
+    document.write('<p>あなたの今年の運勢は、'+kujis[kuji]+'です</p>');
+
+    //更新
+function koshin(){
+  location.reload();
+}
+
+  </script>
+
+<input type="button"  value="更新" onclick="koshin()">
+
+</body>
+</html>
